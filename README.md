@@ -1,5 +1,6 @@
 # Coordinate-Searcher
-NodeJS Coordinate repository. You can serch coordinate in the repository with your posted coordinate object in 200 meters.
+NodeJS coordinate repository.
+ You can serch coordinate in the repository with your posted coordinate object in 200 meters.
 The backend is sleeping! Before you start the frontend, you need start the backend
 
 ## DEMO
