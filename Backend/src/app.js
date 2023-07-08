@@ -31,7 +31,8 @@ app.use((err, req, res, next) => {
 // Handle unexpected errors
 app.use((err, req, res, next) => {
 	res.status(500).json({
-		message: 'something went wrong',
+		code: 500,
+		message: 'Something went wrong',
 	});
 });
 
