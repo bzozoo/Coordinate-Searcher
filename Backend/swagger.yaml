@@ -32,6 +32,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/CoordinateResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CoordinateResponse500'
 
 components:
   schemas:
@@ -76,3 +82,12 @@ components:
                   longitude:
                     type: number
                     format: double
+    CoordinateResponse500:
+      type: object
+      properties:
+        code:
+          type: number
+          example: 500
+        message:
+          type: string
+          example: "Something went wrong"
