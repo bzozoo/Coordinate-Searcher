@@ -1,0 +1,74 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Coordinate API
+paths:
+  /coordinate:
+    post:
+      summary: Koordináta lekérdezés
+      description: Lekérdez egy adott koordináta alapján
+      parameters:
+        - in: body
+          name: coordinate
+          description: A koordináta objektum
+          required: true
+          schema:
+            type: object
+            properties:
+              coordinate:
+                type: object
+                properties:
+                  latitude:
+                    type: number
+                    format: double
+                  longitude:
+                    type: number
+                    format: double
+          example:
+            coordinate:
+              latitude: 47.499280867754166
+              longitude: 19.045129270836636
+      responses:
+        200:
+          description: Sikeres válasz
+          schema:
+            type: object
+            properties:
+              youSent:
+                type: object
+                properties:
+                  latitude:
+                    type: number
+                    format: double
+                  longitude:
+                    type: number
+                    format: double
+              weFound:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                      format: int64
+                    name:
+                      type: string
+                    latitude:
+                      type: number
+                      format: double
+                    longitude:
+                      type: number
+                      format: double
+          example:
+            youSent:
+              latitude: 47.498771772287405
+              longitude: 19.042603145941893
+            weFound:
+              - id: 1
+                name: Lánchíd budai oldal
+                latitude: 47.49855722541163
+                longitude: 19.041399405992916
+              - id: 2
+                name: Lánchíd közepe
+                latitude: 47.499020461151034
+                longitude: 19.044024761423813
