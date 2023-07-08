@@ -7,6 +7,7 @@ NodeJS Coordinate repository. You can serch in it within 200 meters
 
 ## BACKEND DOCUMENTATION
 - [SWAGGER](https://bzozoo.github.io/Coordinate-Searcher/swagger.html)
+- [SWAGGER YAML](https://github.com/bzozoo/Coordinate-Searcher/blob/main/Backend/swagger.yaml)
 
 ## CODES
 - [CODEPEN GEO SEARCH JS CODE - WITHOUT BACKEND](https://codepen.io/bzozoo/pen/WNYZygL)
