@@ -1,15 +1,13 @@
-openapi: 3.0.3
+openapi: 3.1.0
 info:
   title: Coordinate API
-  description: |-
-    Coordinate API
+  description: Coordinate API
   version: 1.0.0
 servers:
   - url: https://f2h9sc-3000.csb.app
 tags:
   - name: Coordinate
     description: Endpoint of Coordinate
- 
 paths:
   /coordinate:
     post:
@@ -38,7 +36,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/CoordinateResponse500'
-
 components:
   schemas:
     CoordinateRequest:
@@ -53,7 +50,6 @@ components:
             longitude:
               type: integer
               example: 19.042603145941893
-      
     CoordinateResponse:
       type: object
       properties:
@@ -90,4 +86,4 @@ components:
           example: 500
         message:
           type: string
-          example: "Something went wrong"
+          example: Something went wrong
