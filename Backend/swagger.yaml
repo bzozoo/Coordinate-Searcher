@@ -10,6 +10,25 @@ tags:
     description: Endpoint of Coordinate
 paths:
   /coordinate:
+    get: 
+      tags:
+        - Coordinate
+      summary: Welcome message
+      description: Welcome message
+      operationId: getWelcome
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WelcomeMessage'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response500'
     post:
       tags:
         - Coordinate
@@ -35,9 +54,15 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CoordinateResponse500'
+                $ref: '#/components/schemas/Response500'
 components:
   schemas:
+    WelcomeMessage: 
+      type: object
+      properties: 
+        messgage:
+          type: string
+          example: "WELOME ON COORDINATE"
     CoordinateRequest:
       type: object
       properties:
@@ -78,7 +103,7 @@ components:
                   longitude:
                     type: number
                     format: double
-    CoordinateResponse500:
+    Response500:
       type: object
       properties:
         code:
@@ -87,3 +112,4 @@ components:
         message:
           type: string
           example: Something went wrong
+
