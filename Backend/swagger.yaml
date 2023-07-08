@@ -5,13 +5,13 @@ info:
     Coordinate API
   version: 1.0.0
 servers:
-  - url: https://petstore3.swagger.io/api/v3
+  - url: https://f2h9sc-3000.csb.app
 tags:
   - name: Coordinate
     description: Endpoint of Coordinate
  
 paths:
-  /coorsinate:
+  /coordinate:
     post:
       tags:
         - Coordinate
@@ -39,6 +39,17 @@ components:
   schemas:
     CoordinateRequest:
       type: object
+      properties:
+        coordinate:
+          type: object
+          properties:
+            latitude:
+              type: integer
+              example: 47.498771772287405
+            longitude:
+              type: integer
+              example: 19.042603145941893
+      
     CoordinateResponse:
       type: object
       properties:
